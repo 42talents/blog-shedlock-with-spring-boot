@@ -1,5 +1,7 @@
 # blog-shedlock-with-spring-boot
 
+[![Java CI with Maven](https://github.com/42talents/blog-shedlock-with-spring-boot/actions/workflows/maven.yml/badge.svg)](https://github.com/42talents/blog-shedlock-with-spring-boot/actions/workflows/maven.yml)
+
 [ShedLock](https://github.com/lukas-krecan/ShedLock) for Spring Boot solves a very common problem, which occurs when running scheduled jobs in your application when deployed with a high availability setup into a production environment. You might be ending up with multiple job executions at the same time.
 
 There is no way with Springs `@Scheduled` out of the box which solves this issue. Instead, frameworks like [ShedLock](https://github.com/lukas-krecan/ShedLock) or [Quartz](http://www.quartz-scheduler.org/) have their approaches.
