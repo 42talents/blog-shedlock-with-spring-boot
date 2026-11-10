@@ -51,7 +51,8 @@ class ShedLockSampleAppApplicationTests {
     void testThatShedLockIsExecuted(CapturedOutput output) {
         LockAssert.TestHelper.makeAllAssertsPass(true);
 
-        await().atMost(4, TimeUnit.SECONDS).untilAsserted(() -> {
+        // cron fires every 2s but lockAtLeastFor=PT5S, so "Locked ..." can be up to ~6s apart - wait longer than that
+        await().atMost(15, TimeUnit.SECONDS).untilAsserted(() -> {
             assertThat(output.getOut()).contains(Lists.newArrayList("Locked 'UNIQUE_KEY_FOR_SHEDLOCK_SCHEDULER'", "Do other things ..."));
         });
 
