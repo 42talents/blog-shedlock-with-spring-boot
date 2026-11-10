@@ -17,7 +17,9 @@
 
 	<properties>
 		<java.version>11</java.version>
-		<testcontainers.version>1.16.0</testcontainers.version>
+		<!-- 1.16.0 ships a docker-java client (API 1.32) that modern Docker daemons reject (min API 1.40) -->
+		<testcontainers.version>1.21.3</testcontainers.version>
+		<junit-jupiter.version>5.10.5</junit-jupiter.version>
 	</properties>
 
 	<dependencies>
