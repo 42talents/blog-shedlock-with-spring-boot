@@ -17,8 +17,8 @@
 
 	<properties>
 		<java.version>11</java.version>
-		<!-- 1.16.0 ships a docker-java client (API 1.32) that modern Docker daemons reject (min API 1.40) -->
-		<testcontainers.version>1.21.3</testcontainers.version>
+		<!-- 1.21.4 ships docker-java 3.4.2 (client API 1.44); 1.21.3 pinned API 1.32, which Docker Engine 29+ on GitHub runners rejects -->
+		<testcontainers.version>1.21.4</testcontainers.version>
 		<junit-jupiter.version>5.10.5</junit-jupiter.version>
 	</properties>
 
